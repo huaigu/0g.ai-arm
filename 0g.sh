@@ -64,7 +64,7 @@ function install_node() {
     # 安装 Go
     if ! check_go_installation; then
         sudo rm -rf /usr/local/go
-        curl -L https://go.dev/dl/go1.22.0.linux-amd64.tar.gz | sudo tar -xzf - -C /usr/local
+        curl -L https://go.dev/dl/go1.22.0.linux-arm64.tar.gz | sudo tar -xzf - -C /usr/local
         echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> $HOME/.bash_profile
         source $HOME/.bash_profile
         go version
